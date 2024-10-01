@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { deleteExpense } from "../../redux/expenseSlice";
-import { Button } from "@/components/ui/button"; // shadCN Button
+import { Button } from "@/components/ui/button";
 import { Expense } from "@/types/ExpenseTypes";
 
 const ExpenseItem = ({

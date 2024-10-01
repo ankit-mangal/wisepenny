@@ -12,7 +12,6 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
 }) => {
   const dispatch = useDispatch();
 
-  // State for form fields
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [transactionType, setTransactionType] = useState<string>("Expense");
@@ -91,7 +90,6 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
         </div>
         <div className="mx-auto">
           <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
-            {/* Radio Buttons */}
             <div className="flex justify-center space-x-6">
               {expenseOption?.map((option, i) => {
                 return (
@@ -113,8 +111,6 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
                 );
               })}
             </div>
-
-            {/* Amount Input */}
             <label htmlFor="amount" className="text-md font-semibold">
               {transactionType === "Expense" ? "Expense" : "Income"} Amount
             </label>
@@ -127,8 +123,6 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
               className="p-3 border rounded-md focus:outline-none focus:ring focus:ring-green-200"
               required
             />
-
-            {/* Title Input */}
             <label htmlFor="title" className="text-md font-semibold">
               {transactionType === "Expense" ? "Expense" : "Income"} Title
             </label>
@@ -141,8 +135,6 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
               className="p-3 border rounded-md focus:outline-none focus:ring focus:ring-green-200"
               required
             />
-
-            {/* Description Textarea */}
             <label htmlFor="description" className="text-md font-semibold">
               {transactionType === "Expense" ? "Expense" : "Income"} Description
             </label>
@@ -156,8 +148,6 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
               className="p-3 border rounded-md focus:outline-none focus:ring focus:ring-green-200"
               required
             />
-
-            {/* Date Input */}
             <label htmlFor="date" className="text-md font-semibold">
               {transactionType === "Expense" ? "Expense" : "Income"} Date
             </label>
@@ -169,8 +159,6 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
               className="p-3 border rounded-md focus:outline-none focus:ring focus:ring-green-200 mb-6"
               required
             />
-
-            {/* Submit Button */}
             <Button
               type="submit"
               className="bg-green-600 text-white text-lg py-3 hover:bg-green-700 transition-all"
