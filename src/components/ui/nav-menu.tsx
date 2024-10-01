@@ -1,4 +1,4 @@
-import { UserRound } from "lucide-react";
+import { Github } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NavMenu = () => {
@@ -15,9 +15,14 @@ const NavMenu = () => {
 
           {/* UserRound icon on the right */}
           <li className="ml-auto">
-            <div className="bg-green-600 p-2 rounded-full text-white flex items-center justify-center">
-              <UserRound />
-            </div>
+            <Link
+              to="https://github.com/ankit-mangal/wisepenny"
+              target="_blank"
+            >
+              <div className="bg-green-600 p-2 rounded-full text-white flex items-center justify-center">
+                <Github />
+              </div>
+            </Link>
           </li>
         </ul>
       </nav>
