@@ -89,7 +89,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
           </h1>
         </div>
         <div className="mx-auto">
-          <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
+          <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="flex justify-center space-x-6">
               {expenseOption?.map((option, i) => {
                 return (
@@ -111,7 +111,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
                 );
               })}
             </div>
-            <label htmlFor="amount" className="text-md font-semibold">
+            <label htmlFor="amount" className="text-md font-semibold mt-3 mb-2">
               {transactionType === "Expense" ? "Expense" : "Income"} Amount
             </label>
             <input
@@ -123,7 +123,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
               className="p-3 border rounded-md focus:outline-none focus:ring focus:ring-green-200"
               required
             />
-            <label htmlFor="title" className="text-md font-semibold">
+            <label htmlFor="title" className="text-md font-semibold mt-3 mb-2">
               {transactionType === "Expense" ? "Expense" : "Income"} Title
             </label>
             <input
@@ -135,7 +135,10 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
               className="p-3 border rounded-md focus:outline-none focus:ring focus:ring-green-200"
               required
             />
-            <label htmlFor="description" className="text-md font-semibold">
+            <label
+              htmlFor="description"
+              className="text-md font-semibold mt-3 mb-2"
+            >
               {transactionType === "Expense" ? "Expense" : "Income"} Description
             </label>
             <textarea
@@ -148,7 +151,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
               className="p-3 border rounded-md focus:outline-none focus:ring focus:ring-green-200"
               required
             />
-            <label htmlFor="date" className="text-md font-semibold">
+            <label htmlFor="date" className="text-md font-semibold mt-3 mb-2">
               {transactionType === "Expense" ? "Expense" : "Income"} Date
             </label>
             <input

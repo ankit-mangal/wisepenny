@@ -13,7 +13,7 @@ const HomePage = () => {
           One Stop Solution To Track & Manage Your Expenses and Income.
         </p>
         <Link to={"/dashboard"}>
-          <Button className="font-montserrat self-center w-100 bg-green-600 text-sm lg:text-xl text-white hover:bg-green-700">
+          <Button className="font-montserrat self-center w-100 bg-green-600 text-sm lg:text-[18px] text-white hover:bg-green-700 py-6 font-medium">
             Get Started
             <ArrowRight className="w-7 h-7 pl-2" />
           </Button>

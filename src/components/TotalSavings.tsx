@@ -11,17 +11,21 @@ const TotalExpenses = () => {
     return finalSettlement;
   });
 
+  const hasTransactions = useSelector(
+    (state: RootState) => state.expenses.expenses.length > 0
+  );
+
   return (
     <div className="py-1s text-2xl font-bold text-center md:text-left md:pb-5">
-      {total ? (
+      {hasTransactions ? (
         <>
           Total Savings:{" "}
           <span
             className={
-              total < 0 ? "text-red-500" : total > 0 ? "text-green-500" : ""
+              total <= 0 ? "text-red-500" : total > 0 ? "text-green-500" : ""
             }
           >
-            {total > 0 ? `+${total}` : `${total}`}
+            {total === 0 ? `-0` : total > 0 ? `+${total}` : `${total}`}
           </span>{" "}
           INR
         </>
