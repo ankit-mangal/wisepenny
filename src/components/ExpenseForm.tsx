@@ -96,6 +96,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
                   <label
                     key={i}
                     className="flex items-center space-x-2 font-semibold pt-3"
+                    htmlFor={option}
                   >
                     <input
                       type="radio"
@@ -117,6 +118,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
             <input
               type="text"
               name="amount"
+              id="amount"
               value={amount}
               onChange={handleAmountChange}
               placeholder="Amount"
@@ -129,6 +131,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
             <input
               type="text"
               name="title"
+              id="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Groceries"
@@ -143,6 +146,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
             </label>
             <textarea
               name="description"
+              id="description"
               cols={20}
               rows={3}
               value={description}
@@ -157,6 +161,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({
             <input
               type="date"
               name="date"
+              id="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
               className="p-3 border rounded-md focus:outline-none focus:ring focus:ring-green-200 mb-6"
